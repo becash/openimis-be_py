@@ -106,7 +106,7 @@
     },
     {
       "name": "worker_voucher",
-      "pip": "git+https://github.com/becash/openimis-be-worker_voucher_py.git@implementation/moldova/develop#egg=openimis-be-worker_voucher"
+      "pip": "git+https://github.com/becash/openimis-be-worker_voucher_py.git@6d9dd51aab5b52e68bf26109fbf1eeb042d39242#egg=openimis-be-worker_voucher"
     },
     {
       "name": "business_config",
