@@ -18,7 +18,7 @@
     },
     {
       "name": "report",
-      "pip": "git+https://github.com/openimis/openimis-be-report_py.git@implementation/moldova/develop#egg=openimis-be-report"
+      "pip": "git+https://github.com/becash/openimis-be-report_py.git@implementation/moldova/develop#egg=openimis-be-report"
     },
     {
       "name": "location",
