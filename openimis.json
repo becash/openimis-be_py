@@ -94,7 +94,7 @@
     },
     {
       "name": "invoice",
-      "pip": "git+https://github.com/openimis/openimis-be-invoice_py.git@implementation/moldova/develop#egg=openimis-be-invoice"
+      "pip": "git+https://github.com/becash/openimis-be-invoice_py.git@implementation/moldova/develop#egg=openimis-be-invoice"
     },
     {
       "name": "im_export",
