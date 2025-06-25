@@ -30,6 +30,10 @@ COPY sentry-requirements.txt /.
 RUN test -z "$SENTRY_DSN" || pip install -r sentry-requirements.txt && :
 
 RUN mkdir /openimis-be
+
+#TODO: temorary disable cache  in docker for next layers
+RUN echo "This will not be cached" && date
+
 COPY . /openimis-be
 WORKDIR /openimis-be
 
