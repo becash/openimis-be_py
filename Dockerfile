@@ -32,7 +32,7 @@ RUN test -z "$SENTRY_DSN" || pip install -r sentry-requirements.txt && :
 RUN mkdir /openimis-be
 
 #TODO: temorary disable cache  in docker for next layers
-RUN echo "This will not be cached" && date >> /_cacje
+ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 
 COPY . /openimis-be
 WORKDIR /openimis-be
