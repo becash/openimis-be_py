@@ -1,4 +1,4 @@
-FROM python:3.10-buster As builder
+FROM python:3.10-bullseye AS builder
 ENV PYTHONUNBUFFERED 1
 ARG DB_DEFAULT
 
@@ -19,7 +19,7 @@ RUN test "$DB_DEFAULT" != "postgresql" && pip install mssql-cli || :
 
 RUN pip install gunicorn
 
-FROM builder As app
+FROM builder AS app
 
 # Install requirements
 COPY requirements.txt /.
@@ -38,7 +38,7 @@ COPY . /openimis-be
 WORKDIR /openimis-be
 
 ARG OPENIMIS_CONF_JSON
-ENV OPENIMIS_CONF_JSON=${OPENIMIS_CONF_JSON}
+ENV OPENIMIS_CONF_JSON ${OPENIMIS_CONF_JSON}
 WORKDIR /openimis-be/script
 RUN python modules-requirements.py ../openimis.json > modules-requirements.txt && pip install -r modules-requirements.txt 
 WORKDIR /openimis-be/openIMIS
